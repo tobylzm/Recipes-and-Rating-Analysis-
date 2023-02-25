@@ -9,9 +9,11 @@ by Zhiming Liu (zhl109@ucsd.edu)
 ## Introduction
 
 In this project, I took the recipe and rating datasets from the [food.com](food.com). 
+
 The raw datasets are:
 - Recipes data contains information about the recipes
 - Interaction data contains information about the reviews and rating
+
 I left merge the two datasets to get the average rating for each recipes as my final dataset to work on, in total there are 83781 rows and 13 columns
 
 
@@ -22,6 +24,7 @@ The interested column of my analysis will be mainly focusing on:
 other columns like:
 - minutes (which contains the preparing time)
 - n_steps(which contains number of steps)
+
 will be used in some analysis
 
 
@@ -71,14 +74,18 @@ The dataframe after cleaning are shown below:
 ### Univariate Analysis
 
 Plot: Distribution of Average Ratings for hhpf
+
 <iframe src="assets/uni_plot.html" width=800 height=600 frameBorder=0></iframe>
+
 The plot shows that the distribution of average rating for high protein food using a histogram. It seems like overall it's very high!
 
 
 ### Bivariate Analysis
 
 Plot: Relationship between minutes and average rating (for minutes less than 120)
+
 <iframe src="assets/bi_plot.html" width=800 height=600 frameBorder=0></iframe>
+
 The plot shows that the relationship between minutes and average rating for minutes less than 120. It seems like most shorter time recipes have higher rating!
 
 
@@ -104,6 +111,7 @@ The description is not missing at random(NMAR) since if the description is too h
 
 #### For depend on
 Using Permutation test to test whether the missingness of average rating depends on the number of steps
+
 Column picked : name (added column that shows length of name)
 
 <iframe src="assets/ns_dis_plot.html" width=800 height=600 frameBorder=0></iframe>
@@ -117,6 +125,7 @@ Column picked : name (added column that shows length of name)
 
 ##### For not depend on (MCAR)
 Using Permutation test to test whether the missingness of average rating depends on the length of the name
+
 Column picked : name (added column that shows length of name)
 
 <iframe src="assets/lenn_dis_plot.html" width=800 height=600 frameBorder=0></iframe>
@@ -131,6 +140,7 @@ Column picked : name (added column that shows length of name)
 
 ### Hypothesis Testing
 ** Null Hypothesis ** : The average rating of healthy high protein food higher than others food is due to random chance
+
 ** Alternative Hypothesis ** : The average rating of healthy high protein food is higher than normal is not due to random chance
 
 Choice of test statistics: The mean of average rating
